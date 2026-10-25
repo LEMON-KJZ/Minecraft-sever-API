@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "serverapi",
+  "version": "${version}",
+  "name": "Server API",
+  "description": "Server-only HTTP API for Minecraft Java 26.3 Fabric servers.",
+  "authors": ["Server API Contributors"],
+  "contact": {},
+  "environment": "server",
+  "entrypoints": {
+    "main": ["com.example.serverapi.ServerApiMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3.x",
+    "java": ">=25",
+    "fabric-api": ">=0.160.5+26.3"
+  }
+}

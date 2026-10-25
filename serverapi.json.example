@@ -1,0 +1,11 @@
+{
+  "bindAddress": "127.0.0.1",
+  "port": 8080,
+  "apiKey": "",
+  "tlsEnabled": false,
+  "keystorePath": "",
+  "keystorePassword": "",
+  "rateLimitPerMinute": 120,
+  "logBufferSize": 500,
+  "requestTimeoutMillis": 5000
+}
