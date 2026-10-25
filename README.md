@@ -1,4 +1,4 @@
-S# Minecraft Server API Fabric Mod
+# Minecraft Server API Fabric Mod
 
 这是一个只安装在 Fabric 服务端的 HTTP API 模组，目标是 Minecraft Java
 Edition 26.3、Fabric Loader 0.19.5+、Fabric API 0.160.5+ 和 Java
