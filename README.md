@@ -96,41 +96,82 @@ http://127.0.0.1:8080/api/v1
 
 ## ⚙️ 配置
 
-首次启动后编辑：
+## ⚙️ 配置
 
-``` text
+首次启动服务器后，编辑以下配置文件：
+
+```text
 config/serverapi.json
 ```
 
-主要配置项如下：
+### 配置项说明
 
-  ------------------------------------------------------------------------
-  配置项                   默认值                  说明
-  ------------------------ ----------------------- -----------------------
-  `bindAddress`            `127.0.0.1`             API 监听地址
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bindAddress</code></td>
+<td><code>127.0.0.1</code></td>
+<td>API 监听地址，默认仅允许本机访问</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td><code>8080</code></td>
+<td>API 监听端口，必须与 Minecraft 游戏端口分开</td>
+</tr>
+<tr>
+<td><code>apiKey</code></td>
+<td>自动生成</td>
+<td>Bearer API 身份验证密钥</td>
+</tr>
+<tr>
+<td><code>tlsEnabled</code></td>
+<td><code>false</code></td>
+<td>是否启用 HTTPS</td>
+</tr>
+<tr>
+<td><code>keystorePath</code></td>
+<td>空</td>
+<td>PKCS12/JKS 证书文件路径</td>
+</tr>
+<tr>
+<td><code>keystorePassword</code></td>
+<td>空</td>
+<td>证书密码</td>
+</tr>
+<tr>
+<td><code>rateLimitPerMinute</code></td>
+<td><code>120</code></td>
+<td>每个客户端每分钟允许的请求数</td>
+</tr>
+<tr>
+<td><code>logBufferSize</code></td>
+<td><code>500</code></td>
+<td>内存中保留的日志条数</td>
+</tr>
+<tr>
+<td><code>requestTimeoutMillis</code></td>
+<td><code>5000</code></td>
+<td>等待 Minecraft 主线程任务的最长时间，单位为毫秒</td>
+</tr>
+</tbody>
+</table>
 
-  `port`                   `8080`                  API 端口，必须与
-                                                   Minecraft 游戏端口分开
+### 修改配置
 
-  `apiKey`                 自动生成                Bearer 认证密钥
+修改监听地址或端口后，需要重启 Minecraft 服务端。
 
-  `tlsEnabled`             `false`                 是否启用 HTTPS
+默认监听地址为 `127.0.0.1`，只能从服务器本机访问 API。如果需要远程访问，请根据实际网络环境修改 `bindAddress`，并正确配置防火墙和端口转发。
 
-  `keystorePath`           空                      PKCS12/JKS 证书路径
+**安全提醒：** 不要将真实的 API Key、证书密码或包含敏感信息的 `config/serverapi.json` 上传到公开 GitHub 仓库。
 
-  `keystorePassword`       空                      证书密码
-
-  `rateLimitPerMinute`     `120`                   每客户端每分钟请求数
-
-  `logBufferSize`          `500`                   内存中保留的日志条数
-
-  `requestTimeoutMillis`   `5000`                  等待 Minecraft
-                                                   主线程任务的最长时间
-  ------------------------------------------------------------------------
-
-修改监听地址或端口后，需要重启服务端。模组不会自动绕过防火墙或服务商端口限制。
-
-详细配置说明见 [INSTALL.md](INSTALL.md)。
+详细配置说明请查看 [INSTALL.md](INSTALL.md)。
 
 ## 🛠️ 从源码构建
 
