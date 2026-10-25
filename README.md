@@ -74,27 +74,103 @@ API Key 保存在服务器的 `config/serverapi.json` 配置文件中。
 
 基础地址示例：
 
-``` text
+```text
 http://127.0.0.1:8080/api/v1
 ```
 
-  方法   接口                  说明
-  ------ --------------------- ----------------------
-  GET    `/health`             健康检查，无需认证
-  GET    `/status`             查询服务器状态
-  GET    `/players`            获取在线玩家信息
-  POST   `/command`            执行服务端控制台指令
-  POST   `/announce`           发送全服公告
-  GET    `/logs`               查询最近的内存日志
-  GET    `/events`             订阅 SSE 实时事件
-  GET    `/gamerules`          获取游戏规则
-  PUT    `/gamerules/{name}`   修改指定游戏规则
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>接口</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/health</code></td>
+<td>健康检查，无需认证</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/status</code></td>
+<td>查询服务器运行状态、版本、内存和在线人数</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/players</code></td>
+<td>获取在线玩家信息</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/command</code></td>
+<td>执行服务端控制台指令</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/announce</code></td>
+<td>发送全服公告</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/logs</code></td>
+<td>查询最近的内存日志</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/events</code></td>
+<td>订阅 SSE 实时事件</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/gamerules</code></td>
+<td>获取当前游戏规则</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><code>/gamerules/{name}</code></td>
+<td>修改指定游戏规则</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/players/{name}/kick</code></td>
+<td>踢出玩家</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/players/{name}/ban</code></td>
+<td>封禁玩家</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/players/{name}/pardon</code></td>
+<td>解除玩家封禁</td>
+</tr>
+<tr>
+<td><code>POST / DELETE</code></td>
+<td><code>/players/{name}/whitelist</code></td>
+<td>添加或移除白名单</td>
+</tr>
+<tr>
+<td><code>POST / DELETE</code></td>
+<td><code>/players/{name}/op</code></td>
+<td>授予或移除 OP 权限</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/players/{name}/message</code></td>
+<td>向指定玩家发送私信</td>
+</tr>
+</tbody>
+</table>
 
-此外还提供玩家踢出、封禁、解除封禁、白名单、OP 权限和私信等接口。
+除健康检查外，其他接口均需要通过 Bearer API Key 认证。
 
-完整接口说明见 [API.md](API.md)，请求示例见 [CURL.md](CURL.md)。
+**相关文档：**
 
-## ⚙️ 配置
+- [API.md](API.md) — 完整接口说明
+- [CURL.md](CURL.md) — 请求示例
 
 ## ⚙️ 配置
 
@@ -200,27 +276,6 @@ gradlew.bat clean test build
 -   [GITHUB.md](GITHUB.md) --- GitHub 上传与发布指南
 
 以上文档都放在项目根目录中。
-
-## 📁 项目结构
-
-``` text
-minecraft-java-26-3-fabric-app/
-├── src/                  # 源代码
-├── gradle/               # Gradle Wrapper 配置
-├── config/               # 配置示例或默认配置
-├── outputs/              # 交付文件
-├── README.md             # 项目介绍
-├── API.md                # API 接口文档
-├── INSTALL.md            # 安装与配置说明
-├── CURL.md               # curl 请求示例
-├── GITHUB.md             # GitHub 上传与发布指南
-├── build.gradle          # Gradle 构建配置
-├── settings.gradle       # Gradle 项目设置
-├── gradle.properties     # Gradle 属性
-├── gradlew               # Linux/macOS 构建脚本
-├── gradlew.bat           # Windows 构建脚本
-└── LICENSE               # 开源许可证
-```
 
 ## 📄 License
 
