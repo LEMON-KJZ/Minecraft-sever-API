@@ -37,4 +37,4 @@
 /serverapi token generate
 ```
 
-新 Key 会显示在这条命令的反馈中；旧 Key 立即失效。不要把 Key 提交到 Git、截图或普通日志中。
+新 Key 会显示在这条命令的反馈中；旧 Key 立即失效。不要把 Key 提交到互联网上。
