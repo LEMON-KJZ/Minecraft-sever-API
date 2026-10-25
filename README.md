@@ -10,7 +10,7 @@
 4. 默认监听 `127.0.0.1:8080`。需要公网访问时，把 `bindAddress` 改为 `0.0.0.0` 或指定网卡地址，并确保主机/服务商防火墙放行独立 API 端口。
 5. API 端口不能等于 Minecraft 游戏端口；冲突时 API 会拒绝启动，Minecraft 服务器仍继续运行。
 
-完整接口、配置和 curl 示例见 `docs/API.md`、`docs/INSTALL.md`、`docs/CURL.md`。
+完整接口、配置和 curl 示例见 `API.md`、`INSTALL.md`、`CURL.md`。
 
 ## API Key
 
@@ -36,4 +36,4 @@ Windows：
 gradlew.bat clean test build
 ```
 
-最终可安装 JAR 位于 `build/libs/`，交付副本位于 `outputs/`。
+最终可安装 JAR 位于 `Packages`。
