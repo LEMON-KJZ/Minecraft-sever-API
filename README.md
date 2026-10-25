@@ -273,7 +273,6 @@ gradlew.bat clean test build
 -   [API.md](API.md) --- API 接口说明与功能列表
 -   [INSTALL.md](INSTALL.md) --- 安装、配置与 HTTPS 指南
 -   [CURL.md](CURL.md) --- curl 请求示例
--   [GITHUB.md](GITHUB.md) --- GitHub 上传与发布指南
 
 以上文档都放在项目根目录中。
 
