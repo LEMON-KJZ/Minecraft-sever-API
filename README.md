@@ -1,4 +1,4 @@
-# Minecraft Server API Fabric Mod
+S# Minecraft Server API Fabric Mod
 
 这是一个只安装在 Fabric 服务端的 HTTP API 模组，目标是 Minecraft Java
 Edition 26.3、Fabric Loader 0.19.5+、Fabric API 0.160.5+ 和 Java
@@ -23,12 +23,32 @@ API，你可以查询服务器状态、获取在线玩家信息、执行服务�
 
 ## 📋 运行环境
 
-  组件            要求
-  --------------- ---------------------
-  Minecraft       Java Edition 26.3
-  Fabric Loader   0.19.5 或更高
-  Fabric API      0.160.5+26.3 或更高
-  Java            25
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>版本要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minecraft</td>
+<td>Java Edition 26.3</td>
+</tr>
+<tr>
+<td>Fabric Loader</td>
+<td>0.19.5 或更高</td>
+</tr>
+<tr>
+<td>Fabric API</td>
+<td>0.160.5+26.3 或更高</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
 
 ## 📥 快速安装
 
